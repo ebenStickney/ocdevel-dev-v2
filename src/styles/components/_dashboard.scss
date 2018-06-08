@@ -1,0 +1,23 @@
+.page-container {
+  display: flex;
+  flex-direction: row;
+
+
+}
+
+.side-container {
+ flex-grow: 1;
+ width: 50%;
+ padding: $m-size;
+}
+
+.side-container__item {
+
+}
+
+.side-container__profilePic {
+  border: 2px black solid;
+  border-radius: 50%;
+  padding: 2px;
+
+}
