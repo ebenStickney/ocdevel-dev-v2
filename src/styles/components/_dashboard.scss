@@ -1,6 +1,10 @@
 .page-container {
   display: flex;
   flex-direction: row;
+  // width: 100vw;
+  // height: 100vh;
+  background: $ash-black;
+  border-left: 3px solid $ocd-orange;
 
 
 }
@@ -16,6 +20,7 @@
   flex-direction: row;
   justify-content: flex-start;
   align-items: center;
+  color: grey;
 }
 
 .side-container__item {
@@ -32,6 +37,11 @@
 .side-container__info {
   display: flex;
   flex-direction: column;
+
+}
+
+.side-container__bio {
+  color: $grey;
 }
 
 .side-container__icons {
@@ -61,6 +71,26 @@
   }
   h2 {
     text-align: center;
+  }
+}
+
+.stacked-headers {
+  color: white;
+  font-family: $exo;
+  h3 {
+    color: $ocd-orange;
+    font-size: $font-size-header;
+  }
+
+  h2 {
+    font-size: 4.8rem;
+    font-weight: 900;
+    line-height: 1;
+    margin: 0;
+
+  }
+  .stacked__name {
+    font-weight: 100;
   }
 }
 
