@@ -12,6 +12,52 @@
 
 .button-link {
   background-color: Transparent;
+  color: white;
+  font-size: $font-size-header-xl;
+  font-family: $exo;
+  border: none;
+  position: relative;
+  padding: $s-size;
+
+  &::after {
+    content: "";
+    height: 3px;
+    width: 0%;
+    position: absolute;
+    background-color: white;
+    bottom: 0px;
+    left: 0px;
+    transition: width .7s .1s cubic-bezier(0,.56,1,1.57);
+
+  }
+  &:hover::after {
+    width: 100%;
+  }
+}
+
+
+.back-button {
+  cursor: pointer;
+  color: $ocd-orange;
+  padding: $l-size;
+  i {
+    animation-name: bandf;
+    animation-duration: 1s;
+    animation-delay: 3s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+    animation-timing-function: ease-in-out;
+  }
+
+}
+@keyframes bandf {
+  0% {
+    transform: translateX(0px);
+  }
+
+  100% {
+    transform: translateX(15px);
+  }
 }
 
 .button-secondary {
