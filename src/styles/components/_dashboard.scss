@@ -3,7 +3,7 @@
   flex-direction: row;
   // width: 100vw;
   // height: 100vh;
-  background: $ash-black;
+  background: $dark-blue;
   border-left: 3px solid $ocd-orange;
 
 
@@ -18,17 +18,24 @@
 .side-container__media {
   display: flex;
   flex-direction: row;
-  justify-content: flex-start;
+  justify-content: flex-end;
   align-items: center;
   color: grey;
-}
+  .side-container__title {
+    font-family: $exo;
+    color: $ocd-orange;
+    margin-right: 10%;
+    padding: $m-size;
+    h1 {
+      font-size: $font-size-header;
+      line-height: 1;
+    }
 
-.side-container__item {
-
+  }
 }
 
 .side-container__profilePic {
-  border: 2px black solid;
+  border: 2px white solid;
   border-radius: 50%;
   padding: 2px;
 
@@ -41,18 +48,24 @@
 }
 
 .side-container__bio {
-  color: $grey;
+  color: $off-white;
+  margin: $l-size;
+  padding: $m-size;
+  font-family: $exo;
+  p {
+    padding-left: $m-size;
+  }
 }
 
 .side-container__icons {
   display: flex;
   flex-direction: column;
   justify-content: space-around;
-  margin: 45px 10px 0 0;
+  margin: 15px 0 10px 10px;
   width: 60px;
   height: 250px;
   a {
-    color: black;
+    color: white;
     transition: color .5s ease-out;
     &:hover {
       color: #ff6a00;
@@ -78,11 +91,13 @@
   color: white;
   font-family: $exo;
   h3 {
+    padding-top: $xl-size;
     color: $ocd-orange;
-    font-size: $font-size-header;
+    font-size: $font-size-header-xl;
   }
 
   h2 {
+
     font-size: 4.8rem;
     font-weight: 900;
     line-height: 1;
@@ -94,11 +109,56 @@
   }
 }
 
-.vl {
-  width: 5px;
-  height: 500px;
-  background: black;
-  border-radius: 25%;
-  border: 2px solid black;
-  margin-top: 10px;
+
+
+
+//creating translate
+.card-container {
+  background: $dark-blue;
+  height: 100vh;
+  margin-top: 0 $m-size;
+  padding: 0;
+  position: relative;
+  overflow: hidden;
+  transition: border .2s .8s cubic-bezier(0,.61,.97,.32);
+  &:hover {
+    border-left: 3px solid $ocd-orange;
+    .info-back{
+      transform: translateX(0);
+  }
+    .info-front {
+      opacity: 0;
+    }
+  }
+}
+
+.info {
+  height: 100vh;
+}
+
+.info-back {
+  background: $dark-blue;
+  position: absolute;
+  width: 100%;
+  top: 0px;
+  left: 0px;
+  transform: translateX(100%);
+  transition: transform .8s .1s ease-in-out;
+
+}
+
+.info-front {
+ background: $dark-blue;
+ display: flex;
+ flex-direction: column;
+ justify-content:center;
+ align-items: center;
+ opacity: 1;
+ transition: opacity .5s ease-out;
+
+ h1 {
+   color: white;
+   margin: 0 auto;
+ }
+
 }
