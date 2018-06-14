@@ -41,12 +41,7 @@
   color: $ocd-orange;
   padding: $l-size;
   i {
-    animation-name: bandf;
-    animation-duration: 1s;
-    animation-delay: 3s;
-    animation-iteration-count: infinite;
-    animation-direction: alternate;
-    animation-timing-function: ease-in-out;
+    animation: bandf 1s ease-in-out 2s infinite alternate;
   }
 
 }
