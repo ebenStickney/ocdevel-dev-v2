@@ -3,7 +3,7 @@ import React from 'react';
 
 class DashboardPage extends React.Component {
   state = {
-    hasClicked: false
+    hasClicked: true
   }
 
   handleClick = () => {
@@ -27,34 +27,37 @@ class DashboardPage extends React.Component {
           <div className="side-container card-container">
               {this.state.hasClicked ?
                 <div className="info info-back">
-                    <div className="back-button" onClick={this.handleClick}>
-                      <i className="fas fa-chevron-circle-left fa-3x"></i>
+                    <div className="section side-container__media">
+                    <div className="section button-title">
+                        <div className="back-button" onClick={this.handleClick}>
+                          <i className="fas fa-chevron-circle-left fa-3x"></i>
+                        </div>
+                        <div className="side-container__title">
+                          <h1> About ocDevels Creator </h1>
+                        </div>
                     </div>
-                    <div className="side-container__media">
-                          <div className="side-container__title">
-                            <h1> About <br /> ocDevels <br /> Creator </h1>
 
-                          </div>
-                          <div className="side-container__item side-container__picName">
-                               <img className="side-container__profilePic" src="/images/profile_pic.jpeg" alt="Profile picture" />
-                          </div>
-                         <div className="side-container__icons">
-                              <a target="_blank" href="https://www.facebook.com/lefnire">
-                                <i className="fab fa-facebook-square fa-3x"></i>
-                              </a>
-                              <a target="_blank" href="https://www.linkedin.com/in/lefnire">
-                              <i className="fab fa-linkedin fa-3x"></i>
-                              </a>
-                              <a target="_blank" href="https://twitter.com/lefnire">
-                                <i className="fab fa-twitter-square fa-3x"></i>
-                              </a>
-                              <a target="_blank" href="https://github.com/lefnire">
-                                <i className="fab fa-github-square fa-3x"></i>
-                              </a>
-                         </div>
-
+                          <div className="pic-links">
+                              <div className="side-container__picName">
+                                   <img className="side-container__profilePic" src="/images/profile_pic.jpeg" alt="Profile picture" />
+                              </div>
+                             <div className="side-container__icons">
+                                  <a target="_blank" href="https://www.facebook.com/lefnire">
+                                    <i className="fab fa-facebook-square fa-3x"></i>
+                                  </a>
+                                  <a target="_blank" href="https://www.linkedin.com/in/lefnire">
+                                  <i className="fab fa-linkedin fa-3x"></i>
+                                  </a>
+                                  <a target="_blank" href="https://twitter.com/lefnire">
+                                    <i className="fab fa-twitter-square fa-3x"></i>
+                                  </a>
+                                  <a target="_blank" href="https://github.com/lefnire">
+                                    <i className="fab fa-github-square fa-3x"></i>
+                                  </a>
+                             </div>
+                            </div>
                      </div>
-                    <div className="side-container__bio">
+                    <div className="section side-container__bio">
 
                         <p>
                           Tyler is a full-stack Senior JavaScript developer and
