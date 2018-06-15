@@ -3,7 +3,7 @@ import React from 'react';
 
 class DashboardPage extends React.Component {
   state = {
-    hasClicked: false
+    hasClicked: true
   }
 
   handleClick = () => {
